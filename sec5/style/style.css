@@ -1,0 +1,178 @@
+@charset  "utf-8";
+/* 
+フォント
+下記の順で指定します。
+Helvetica Neue, Arial, Hiragino Sans, Meiryo, sans-serif
+コンテンツ幅
+全幅表示です。
+画像
+高さは700px固定で、画面サイズにあわせて画像が拡大縮小します。
+テキスト
+テキストエリアの横の余白は5%で設定します。
+材料と作り方のリストは、点線で区切ります。
+一覧ボタンとフッター
+一覧ボタンとフッターはトップページの仕様と同じです。
+レスポンシブ
+ブレークポイントは834pxです。
+*/
+
+html {
+    font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", "sans-serif";
+    font-size: 10px;
+}
+
+
+/* 
+info
+*/
+
+#info {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+#info div {
+    flex-grow: 1;
+}
+
+/* 
+img
+*/
+
+#img {
+    margin-right: 50px;
+    width: 50%;
+}
+
+#img img {
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 
+list
+*/
+
+#list {
+    width: 50%;
+    padding: 40px 5% 0 5%;
+}
+
+#list h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#list .about {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* 
+ingredients
+*/
+#ingredients {
+    margin-bottom: 30px;
+}
+
+#ingredients h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #cecece;
+    margin-bottom: 20px;
+}
+
+#ingredients li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: dotted 1px #cecece;
+}
+
+#ingredients ul li:last-child {
+    margin-bottom: 0;
+}
+
+#ingredients li p {
+    font-size: 2rem;
+}
+
+/* 
+recipe
+*/
+
+
+#recipe h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #cecece;
+    margin-bottom: 20px;
+}
+
+#recipe li {
+    font-size: 2rem;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: dotted 1px #cecece;
+
+}
+
+/* 
+link
+*/
+main a {
+    display: block;
+    width: 230px;
+    font-size: 2rem;
+    padding: 20px 30px;
+    border: solid 1px #cecece;
+    margin: 0 auto;
+    transition: all 0.5s;
+    margin-bottom: 50px;
+}
+
+main a:hover {
+    background-color: gray;
+    opacity: 0.8;
+}
+
+/* 
+footer
+*/
+
+#footer {
+    text-align: center;
+}
+
+#footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+#footer li {
+    margin-right: 30px;
+    border-bottom: solid 1px #cecece;
+}
+
+
+@media screen and (max-width: 834px) {
+    #info {
+        flex-direction: column;
+    }
+
+    #img {
+        width: 100%;
+    }
+
+    #list {
+        width: 100%;
+    }
+}

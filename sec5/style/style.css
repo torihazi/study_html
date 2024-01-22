@@ -29,7 +29,6 @@ info
 #info {
     display: flex;
     margin-bottom: 50px;
-    margin-right: 4%;
 }
 
 #info div {
@@ -42,6 +41,7 @@ img
 
 #img {
     margin-right: 50px;
+    width: 50%;
 }
 
 #img img {
@@ -55,7 +55,8 @@ list
 */
 
 #list {
-    margin-top: 30px;
+    width: 50%;
+    padding: 40px 5% 0 5%;
 }
 
 #list h1 {
@@ -147,9 +148,6 @@ footer
 
 #footer {
     text-align: center;
-    position: fixed;
-    left: 50%;
-    bottom: 0;
 }
 
 #footer ul {
@@ -168,5 +166,13 @@ footer
 @media screen and (max-width: 834px) {
     #info {
         flex-direction: column;
+    }
+
+    #img {
+        width: 100%;
+    }
+
+    #list {
+        width: 100%;
     }
 }

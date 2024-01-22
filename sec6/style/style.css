@@ -1,0 +1,177 @@
+@charset  "utf-8";
+/* 
+フォント
+Google Fonts の「Crimson Text」を使用します。
+コンテンツ幅
+メインビジュアルとヘッダーメニューは90vw、コンテンツ部分は1000pxで設定します。メインビジュアルの高さは可変です。
+グローバルナビゲーション
+ConceptとWorkをクリックすると各コンテンツにジャンプするようページ内リンクを設定します。
+Contactをクリックするとメーラーが起動して、件名に「お問い合わせ」と設定されている状態にします。
+Concept、Work
+画面幅を縮めた際に、画像とテキストエリアは縮小させます。
+フッター
+ロゴとコピーライトを横並びの両端で揃えます。
+レスポンシブ
+ブレークポイントは767pxです。
+スマホ時は、Concept、Workの画像とテキストを縦に並べます。Workは画像、テキストの順で並ぶようにCSSで設定します。
+*/
+
+html {
+    font-size: 10px;
+    font-family: 'Crimson Text', serif;
+}
+
+.logo {
+    width: 150px;
+}
+
+/* 
+mainvisual
+*/
+#mainvisual {
+    margin: 40px auto 30px auto;
+    width: 90vw;
+    max-width: 1920px;
+}
+
+#mainvisual img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 
+header
+*/
+
+#header {
+    width: 90vw;
+    max-width: 1920px;
+    margin: 0 auto 50px auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+#header h1 {
+    margin-right: 30px;
+}
+
+
+
+#header-nav ul {
+    display: flex;
+}
+
+#header-nav li {
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+#header-nav a:hover {
+    opacity: 0.8;
+}
+
+/* 
+container
+*/
+
+#container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+}
+
+.box img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.box .box-text {
+    width: 50%;
+    padding: 0 5%;
+}
+
+
+.box-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.box-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.box-text p {
+    font-size: 1.3rem;
+}
+
+
+/* 
+Concept
+*/
+
+#concept {
+    margin-bottom: 40px;
+}
+
+
+/* 
+work
+*/
+
+#work {
+    flex-direction: row-reverse;
+    margin-bottom: 60px;
+}
+
+
+/* 
+footer
+*/
+#footer {
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 
+レスポンシブ
+*/
+
+@media screen and (max-width: 767px){
+    #mainvisual {
+        margin: 0 0 30px auto;
+        width: 100%;
+    }
+
+    .box img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .box .box-text {
+        width: 100%;
+        padding: 0 4%;
+    }
+
+    #concept {
+        flex-direction: column;
+    }
+
+    #work {
+        flex-direction: column;
+    }
+
+    #footer {
+        padding: 0 4%;
+    }
+
+
+}
